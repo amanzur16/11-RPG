@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/shieldBlue.obj-533afea193013e2ce6232b0842128f25.mesh"
+
+[deps]
+
+files=[ "res://.import/shieldBlue.obj-533afea193013e2ce6232b0842128f25.mesh" ]
+
+source_file="res://Castle/castle-kit-1.0/Models/shieldBlue.obj"
+dest_files=[ "res://.import/shieldBlue.obj-533afea193013e2ce6232b0842128f25.mesh", "res://.import/shieldBlue.obj-533afea193013e2ce6232b0842128f25.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

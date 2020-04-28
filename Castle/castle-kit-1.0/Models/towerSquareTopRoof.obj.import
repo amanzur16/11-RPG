@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/towerSquareTopRoof.obj-e9722a61a8594f8ddb9d09193d9f2be9.mesh"
+
+[deps]
+
+files=[ "res://.import/towerSquareTopRoof.obj-e9722a61a8594f8ddb9d09193d9f2be9.mesh" ]
+
+source_file="res://Castle/castle-kit-1.0/Models/towerSquareTopRoof.obj"
+dest_files=[ "res://.import/towerSquareTopRoof.obj-e9722a61a8594f8ddb9d09193d9f2be9.mesh", "res://.import/towerSquareTopRoof.obj-e9722a61a8594f8ddb9d09193d9f2be9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

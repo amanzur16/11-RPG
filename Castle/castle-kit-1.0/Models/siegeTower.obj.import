@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/siegeTower.obj-f737eb7f7d8f5b272c8feb0370bb584b.mesh"
+
+[deps]
+
+files=[ "res://.import/siegeTower.obj-f737eb7f7d8f5b272c8feb0370bb584b.mesh" ]
+
+source_file="res://Castle/castle-kit-1.0/Models/siegeTower.obj"
+dest_files=[ "res://.import/siegeTower.obj-f737eb7f7d8f5b272c8feb0370bb584b.mesh", "res://.import/siegeTower.obj-f737eb7f7d8f5b272c8feb0370bb584b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

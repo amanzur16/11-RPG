@@ -1,0 +1,22 @@
+[gd_scene format=2]
+
+[node name="Speaking" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 494.0
+margin_right = 1022.0
+margin_bottom = 595.0
+color = Color( 0.0705882, 0.309804, 0.501961, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_right = 1023.0
+margin_bottom = 103.0
+text = "'elp Me! My Knights have overthrown me and have taken my Gold. 'Eliminate them and the gold is yours! I just want my kingdom back."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
