@@ -1,7 +1,7 @@
 extends RayCast
 
 var current_collider
-onready var interaction_label = get_node("/root/World/UI/interaction_label")
+onready var InteractionLabel = get_node("/root/World/UI/InteractionLabel")
 
 
 func _ready():
@@ -25,9 +25,9 @@ func _process(delta):
 		
 func set_interaction_text(text):
 	if !text:
-		interaction_label.set_text("")
-		interaction_label.set_visible(false)
+		InteractionLabel.set_text("")
+		InteractionLabel.set_visible(false)
 	else:
 		var interact_key = OS.get_scancode_string(InputMap.get_action_list("Interact")[0].scancode)
-		interaction_label.set_text("Press %s to %s" % [interact_key, text])
-		interaction_label.set_visible(true)
+		InteractionLabel.set_text("Press %s to %s" % [interact_key, text])
+		InteractionLabel.set_visible(true)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/towerBalcony.obj-78f966d7c049d3b57661cedf4c22ca6d.mesh"
+
+[deps]
+
+files=[ "res://.import/towerBalcony.obj-78f966d7c049d3b57661cedf4c22ca6d.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/towerBalcony.obj"
+dest_files=[ "res://.import/towerBalcony.obj-78f966d7c049d3b57661cedf4c22ca6d.mesh", "res://.import/towerBalcony.obj-78f966d7c049d3b57661cedf4c22ca6d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

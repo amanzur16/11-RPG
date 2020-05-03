@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/door.obj-06a1d3e1b60f758931cafcf1f8ae7e54.mesh"
+
+[deps]
+
+files=[ "res://.import/door.obj-06a1d3e1b60f758931cafcf1f8ae7e54.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/door.obj"
+dest_files=[ "res://.import/door.obj-06a1d3e1b60f758931cafcf1f8ae7e54.mesh", "res://.import/door.obj-06a1d3e1b60f758931cafcf1f8ae7e54.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

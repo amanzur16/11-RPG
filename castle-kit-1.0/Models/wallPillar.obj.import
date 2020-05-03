@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallPillar.obj-71f967eb792691c872b41b9038c9bebc.mesh"
+
+[deps]
+
+files=[ "res://.import/wallPillar.obj-71f967eb792691c872b41b9038c9bebc.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/wallPillar.obj"
+dest_files=[ "res://.import/wallPillar.obj-71f967eb792691c872b41b9038c9bebc.mesh", "res://.import/wallPillar.obj-71f967eb792691c872b41b9038c9bebc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

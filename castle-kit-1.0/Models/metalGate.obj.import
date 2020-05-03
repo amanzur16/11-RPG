@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/metalGate.obj-2f2da4e5b53bde6bb51b71e8dccf013a.mesh"
+
+[deps]
+
+files=[ "res://.import/metalGate.obj-2f2da4e5b53bde6bb51b71e8dccf013a.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/metalGate.obj"
+dest_files=[ "res://.import/metalGate.obj-2f2da4e5b53bde6bb51b71e8dccf013a.mesh", "res://.import/metalGate.obj-2f2da4e5b53bde6bb51b71e8dccf013a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

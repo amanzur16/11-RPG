@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sword.obj-56879b2284dd0b361165dfc18a0b91c7.mesh"
+
+[deps]
+
+files=[ "res://.import/sword.obj-56879b2284dd0b361165dfc18a0b91c7.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/sword.obj"
+dest_files=[ "res://.import/sword.obj-56879b2284dd0b361165dfc18a0b91c7.mesh", "res://.import/sword.obj-56879b2284dd0b361165dfc18a0b91c7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

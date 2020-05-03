@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/towerSquareBaseBorder.obj-9ef3aa4713e92f2fedc7ea6a3033a174.mesh"
+
+[deps]
+
+files=[ "res://.import/towerSquareBaseBorder.obj-9ef3aa4713e92f2fedc7ea6a3033a174.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/towerSquareBaseBorder.obj"
+dest_files=[ "res://.import/towerSquareBaseBorder.obj-9ef3aa4713e92f2fedc7ea6a3033a174.mesh", "res://.import/towerSquareBaseBorder.obj-9ef3aa4713e92f2fedc7ea6a3033a174.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

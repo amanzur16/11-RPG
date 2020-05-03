@@ -1,100 +1,235 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Clone501.tscn" type="PackedScene" id=1]
+[ext_resource path="res://character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://castlebuild.tscn" type="PackedScene" id=2]
 [ext_resource path="res://king.tscn" type="PackedScene" id=3]
-[ext_resource path="res://tree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://kenney_platformerkit/Side/coinGold.png" type="Texture" id=4]
+[ext_resource path="res://EnemyKnight.tscn" type="PackedScene" id=5]
+[ext_resource path="res://door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://coinGold.tscn" type="PackedScene" id=7]
+[ext_resource path="res://kenney_platformerkit/Side/BASTION_.TTF" type="DynamicFontData" id=8]
+[ext_resource path="res://Counter.gd" type="Script" id=9]
+[ext_resource path="res://tree.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Castle/castle-kit-1.0/Ground027_2K_AmbientOcclusion.jpg" type="Texture" id=11]
+[ext_resource path="res://Castle/castle-kit-1.0/Ground027_2K_Color.jpg" type="Texture" id=12]
+[ext_resource path="res://Castle/castle-kit-1.0/Ground027_2K_Normal.jpg" type="Texture" id=13]
+[ext_resource path="res://Castle/castle-kit-1.0/Ground027_2K_Roughness.jpg" type="Texture" id=14]
 
 [sub_resource type="PlaneMesh" id=1]
+size = Vector2( 750, 750 )
 
-[sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.0392157, 0.329412, 0, 1 )
-roughness = 0.9
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 12 )
+roughness_texture = ExtResource( 14 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 13 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 11 )
+ao_on_uv2 = false
+ao_texture_channel = 0
 
-[sub_resource type="ConvexPolygonShape" id=3]
-points = PoolVector3Array( -1.00542, 0.00546448, -1.00546, -1.00542, 0.00546448, 1.00546, 1.00546, 0.00546448, -1.00546, 1.00546, 0.00546448, 1.00546 )
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -377.049, -2.04918, -377.049, -377.049, -2.04918, 377.049, 377.049, -2.04918, -377.049, 377.049, -2.04918, 377.049 )
 
-[node name="World" type="StaticBody"]
+[sub_resource type="DynamicFont" id=5]
+size = 39
+use_filter = true
+font_data = ExtResource( 8 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 300, 0, 0, 0, 1, 0, 0, 0, 300, -4.06306, -0.285434, 0.631714 )
+[sub_resource type="DynamicFont" id=6]
+size = 50
+use_filter = true
+font_data = ExtResource( 8 )
+
+[node name="World" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.1127, 0 )
+
+[node name="Ground" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground"]
 mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+material/0 = SubResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 300, 0, 0, 0, 1, 0, 0, 0, 300, 0, 0, 0 )
-shape = SubResource( 3 )
+[node name="CollisionShape" type="CollisionShape" parent="Ground"]
+shape = SubResource( 4 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.967815, 0.251664, 0, -0.251664, 0.967815, 0.0103722, 16.2457, 41.4809 )
-light_color = Color( 0.933333, 0.913725, 0.701961, 1 )
-shadow_enabled = true
+transform = Transform( -0.504656, -0.181265, -0.844077, 0.0825641, -0.983361, 0.161813, -0.859363, 0.0119697, 0.511225, 22.2682, 142.345, 208.713 )
+light_color = Color( 0.72549, 0.701961, 0.133333, 1 )
+light_energy = 2.75
 
 [node name="towerSquareMid" parent="." instance=ExtResource( 2 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -33.3179, 56.8052, -90.2661 )
+transform = Transform( 6, 0, 0, 0, 6, 0, 0, 0, 6, -202.831, 157.799, 360.786 )
 
-[node name="UI" type="Control" parent="."]
+[node name="character" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.87522, 0, 0.856212, 0, 3, 0, -0.856212, 0, -2.87522, 0, 0.749081, 332.168 )
+
+[node name="king" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.99861, 0, 0.0912494, 0, 3, 0, -0.0912494, 0, -2.99861, 40.7347, 65.2317, 40.4995 )
+
+[node name="Door" parent="." instance=ExtResource( 6 )]
+transform = Transform( 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 257.532 )
+
+[node name="Enemies" type="Spatial" parent="."]
+
+[node name="knightRed2" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 127.093, 0, 192.049 )
+
+[node name="knightRed3" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -112.076, 0, 111.833 )
+
+[node name="knightRed4" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 33.2775, 0, 7.74935 )
+
+[node name="knightRed5" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -114.292, -0.768173, 127.306 )
+
+[node name="knightRed6" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -8.11983, 0, 20.7892 )
+
+[node name="knightRed9" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 17.8972, 0, -2.23961 )
+
+[node name="knightRed7" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 2.89774, 0, -165.925 )
+
+[node name="knightRed10" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 36.0655, 0, -8.82379 )
+
+[node name="knightRed11" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 46.1602, 0, -165.274 )
+
+[node name="knightRed12" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 81.8571, 0, -8.82379 )
+
+[node name="knightRed13" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 78.4057, 0, 21.0475 )
+
+[node name="knightRed14" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 1.05006, 0, -8.82379 )
+
+[node name="knightRed15" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 107.676, 0, -8.82379 )
+
+[node name="knightRed8" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, -19.3571, 0, -6.87265 )
+
+[node name="knightRed" parent="Enemies" instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 128.213, 134.902, 255.324 )
+
+[node name="Coins" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.31223, -425.57 )
+
+[node name="coinGold" parent="Coins" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10689, 8.47848, 322.26 )
+
+[node name="Coins2" type="Spatial" parent="Coins"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18576, 0, 0 )
+
+[node name="coinGold" parent="Coins/Coins2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09123, 8.47848, 322.495 )
+
+[node name="Coins5" type="Spatial" parent="Coins"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18576, 0, -7.74652 )
+
+[node name="coinGold" parent="Coins/Coins5" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09123, 8.47848, 322.495 )
+
+[node name="Coins6" type="Spatial" parent="Coins"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.27315, 0, -7.74652 )
+
+[node name="coinGold" parent="Coins/Coins6" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09123, 8.47848, 322.495 )
+
+[node name="Coins7" type="Spatial" parent="Coins"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0750275, 0, -7.74652 )
+
+[node name="coinGold" parent="Coins/Coins7" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09123, 8.47848, 322.495 )
+
+[node name="Coins3" type="Spatial" parent="Coins"]
+
+[node name="coinGold" parent="Coins/Coins3" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09123, 8.47848, 322.495 )
+
+[node name="Coins4" type="Spatial" parent="Coins"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.40542, 0, 0 )
+
+[node name="coinGold" parent="Coins/Coins4" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09123, 8.47848, 322.495 )
+
+[node name="Control" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="interaction_label" type="Label" parent="UI"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = 218.0
-margin_right = 1002.0
-margin_bottom = 274.0
-text = "Press E to interact"
-align = 1
+[node name="coinGold" type="Sprite" parent="Control"]
+position = Vector2( 856.779, 45.0497 )
+scale = Vector2( 1.14077, 1 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 898.0
+margin_top = 2.0
+margin_right = 1022.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.980392, 0.760784, 0.0117647, 1 )
+text = "x"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="king" parent="." instance=ExtResource( 3 )]
+[node name="Counter" type="Label" parent="Control"]
+margin_left = 930.773
+margin_top = 8.78433
+margin_right = 970.773
+margin_bottom = 68.7843
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.980392, 0.760784, 0.0117647, 1 )
+text = "Q"
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Clone501" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000443459, -0.308353, -55.5784 )
+[node name="Trees" type="Spatial" parent="."]
 
-[node name="Spatial" type="Spatial" parent="."]
+[node name="tree" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 87.2742, 0, 0 )
 
-[node name="tree" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -38, 0, -14 )
+[node name="tree2" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 87.2742, 0, -82.9614 )
 
-[node name="tree2" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -38, 0, -4.80118 )
+[node name="tree3" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -85.488, 0, -82.9614 )
 
-[node name="tree3" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -38, 0, 4.40296 )
+[node name="tree4" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -85.488, 0, -11.9696 )
 
-[node name="tree4" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 35.4449, 0, 4.40296 )
+[node name="tree5" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -85.488, 0, -158.209 )
 
-[node name="tree5" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 35.4449, 0, -5.63844 )
+[node name="tree6" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -8.22425, 0, -158.209 )
 
-[node name="tree6" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 35.4449, 0, -15.0492 )
+[node name="tree7" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 84.5002, 0, -158.209 )
 
-[node name="tree7" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 81.5941, 0, -250.389 )
+[node name="tree8" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 84.5002, 0, 42.7414 )
 
-[node name="tree8" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 81.5941, 0, -236.087 )
-
-[node name="tree9" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 81.5941, 0, -222.015 )
-
-[node name="tree10" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -19.5065, 0, -222.015 )
-
-[node name="tree11" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -19.5065, 0, -237.311 )
-
-[node name="tree12" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -19.5065, 0, -249.971 )
+[node name="tree9" parent="Trees" instance=ExtResource( 10 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -86.1548, 0, 42.7414 )
+[connection signal="CoinCollected" from="Coins/coinGold" to="Control/Counter" method="_on_coinGold_CoinCollected"]
+[connection signal="CoinCollected" from="Coins/Coins2/coinGold" to="Control/Counter" method="_on_coinGold_CoinCollected"]
+[connection signal="CoinCollected" from="Coins/Coins5/coinGold" to="Control/Counter" method="_on_coinGold_CoinCollected"]
+[connection signal="CoinCollected" from="Coins/Coins6/coinGold" to="Control/Counter" method="_on_coinGold_CoinCollected"]
+[connection signal="CoinCollected" from="Coins/Coins7/coinGold" to="Control/Counter" method="_on_coinGold_CoinCollected"]
+[connection signal="CoinCollected" from="Coins/Coins3/coinGold" to="Control/Counter" method="_on_coinGold_CoinCollected"]
+[connection signal="CoinCollected" from="Coins/Coins4/coinGold" to="Control/Counter" method="_on_coinGold_CoinCollected"]

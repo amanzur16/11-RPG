@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gate.obj-53f14592757b9d849d18db6e64d6ad85.mesh"
+
+[deps]
+
+files=[ "res://.import/gate.obj-53f14592757b9d849d18db6e64d6ad85.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/gate.obj"
+dest_files=[ "res://.import/gate.obj-53f14592757b9d849d18db6e64d6ad85.mesh", "res://.import/gate.obj-53f14592757b9d849d18db6e64d6ad85.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

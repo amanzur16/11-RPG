@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flagBlue.obj-72c08202a6b47424168e607b70c2da86.mesh"
+
+[deps]
+
+files=[ "res://.import/flagBlue.obj-72c08202a6b47424168e607b70c2da86.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/flagBlue.obj"
+dest_files=[ "res://.import/flagBlue.obj-72c08202a6b47424168e607b70c2da86.mesh", "res://.import/flagBlue.obj-72c08202a6b47424168e607b70c2da86.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

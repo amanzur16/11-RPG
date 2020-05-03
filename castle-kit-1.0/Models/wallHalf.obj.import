@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallHalf.obj-15dab3acf25c859be7f5ed632bb8f38e.mesh"
+
+[deps]
+
+files=[ "res://.import/wallHalf.obj-15dab3acf25c859be7f5ed632bb8f38e.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/wallHalf.obj"
+dest_files=[ "res://.import/wallHalf.obj-15dab3acf25c859be7f5ed632bb8f38e.mesh", "res://.import/wallHalf.obj-15dab3acf25c859be7f5ed632bb8f38e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

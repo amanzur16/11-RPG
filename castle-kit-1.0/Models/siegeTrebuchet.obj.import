@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/siegeTrebuchet.obj-23a1ea612317b0332ba38ab201a5e886.mesh"
+
+[deps]
+
+files=[ "res://.import/siegeTrebuchet.obj-23a1ea612317b0332ba38ab201a5e886.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/siegeTrebuchet.obj"
+dest_files=[ "res://.import/siegeTrebuchet.obj-23a1ea612317b0332ba38ab201a5e886.mesh", "res://.import/siegeTrebuchet.obj-23a1ea612317b0332ba38ab201a5e886.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

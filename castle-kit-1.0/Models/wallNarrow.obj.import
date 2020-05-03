@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallNarrow.obj-0db8369a096e6074f94f1a098b7d0ca6.mesh"
+
+[deps]
+
+files=[ "res://.import/wallNarrow.obj-0db8369a096e6074f94f1a098b7d0ca6.mesh" ]
+
+source_file="res://castle-kit-1.0/Models/wallNarrow.obj"
+dest_files=[ "res://.import/wallNarrow.obj-0db8369a096e6074f94f1a098b7d0ca6.mesh", "res://.import/wallNarrow.obj-0db8369a096e6074f94f1a098b7d0ca6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

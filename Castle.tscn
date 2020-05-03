@@ -1,0 +1,387 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://castle-kit-1.0/Models/wall.fbx" type="PackedScene" id=1]
+[ext_resource path="res://castle-kit-1.0/Models/wallDoor.fbx" type="PackedScene" id=2]
+[ext_resource path="res://castle-kit-1.0/Models/wallDark.material" type="Material" id=3]
+[ext_resource path="res://castle-kit-1.0/Models/wall.material" type="Material" id=4]
+
+[sub_resource type="ArrayMesh" id=1]
+surfaces/0 = {
+"aabb": AABB( -10, 0, 0, 10, 4.5, 10 ),
+"array_data": PoolByteArray( 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 0, 0, 127, 0, 0, 0, 0, 0, 129, 129, 0, 0, 3, 201, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 127, 0, 0, 0, 0, 0, 129, 129, 235, 208, 3, 201, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 127, 0, 0, 0, 0, 0, 129, 129, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 65, 127, 0, 0, 0, 0, 0, 129, 129, 235, 208, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 127, 0, 0, 0, 0, 0, 129, 129, 0, 0, 0, 60, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 127, 0, 0, 0, 0, 0, 129, 129, 235, 208, 3, 201, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 127, 129, 0, 0, 0, 60, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 32, 65, 129, 0, 0, 0, 0, 0, 127, 129, 235, 80, 0, 60, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 127, 129, 0, 0, 3, 201, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 32, 65, 129, 0, 0, 0, 0, 0, 127, 129, 235, 80, 3, 201, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 127, 129, 0, 0, 3, 201, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 32, 65, 129, 0, 0, 0, 0, 0, 127, 129, 235, 80, 0, 60, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 0, 0, 124, 25, 0, 0, 0, 0, 129, 129, 0, 0, 230, 200, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 124, 25, 0, 0, 0, 0, 129, 129, 131, 189, 40, 204, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 124, 25, 0, 0, 0, 0, 129, 129, 235, 208, 230, 200, 51, 51, 179, 190, 0, 0, 144, 64, 102, 102, 26, 65, 124, 25, 0, 0, 0, 0, 129, 129, 191, 208, 40, 204, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 124, 25, 0, 0, 0, 0, 129, 129, 235, 208, 230, 200, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 124, 25, 0, 0, 0, 0, 129, 129, 131, 189, 40, 204, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 132, 25, 0, 0, 0, 0, 127, 129, 0, 0, 110, 191, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 32, 65, 132, 25, 0, 0, 0, 0, 127, 129, 235, 80, 110, 191, 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 132, 25, 0, 0, 0, 0, 127, 129, 131, 61, 88, 200, 102, 102, 26, 193, 0, 0, 144, 64, 102, 102, 26, 65, 132, 25, 0, 0, 0, 0, 127, 129, 191, 80, 88, 200, 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 132, 25, 0, 0, 0, 0, 127, 129, 131, 61, 88, 200, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 32, 65, 132, 25, 0, 0, 0, 0, 127, 129, 235, 80, 110, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 65, 0, 129, 0, 0, 127, 0, 0, 129, 0, 0, 203, 208, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 32, 65, 0, 129, 0, 0, 127, 0, 0, 129, 235, 208, 203, 208, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 127, 0, 0, 129, 0, 0, 0, 60, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 127, 0, 0, 129, 235, 208, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 127, 0, 0, 129, 0, 0, 0, 60, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 32, 65, 0, 129, 0, 0, 127, 0, 0, 129, 235, 208, 203, 208, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 65, 0, 0, 127, 0, 127, 0, 0, 129, 0, 0, 0, 60, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 0, 0, 127, 0, 127, 0, 0, 129, 0, 0, 3, 201, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 32, 65, 0, 0, 127, 0, 127, 0, 0, 129, 235, 208, 0, 60, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 32, 65, 0, 0, 127, 0, 127, 0, 0, 129, 235, 208, 3, 201, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 32, 65, 0, 0, 127, 0, 127, 0, 0, 129, 235, 208, 0, 60, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 0, 0, 127, 0, 127, 0, 0, 129, 0, 0, 3, 201, 0, 0, 32, 193, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 129, 0, 0, 129, 235, 80, 0, 60, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 0, 0, 129, 0, 129, 0, 0, 129, 235, 80, 3, 201, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 129, 0, 0, 129, 0, 0, 0, 60, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 0, 0, 0, 0, 129, 0, 129, 0, 0, 129, 0, 0, 3, 201, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 129, 0, 0, 129, 0, 0, 0, 60, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 0, 0, 129, 0, 129, 0, 0, 129, 235, 80, 3, 201, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 0, 25, 132, 0, 129, 0, 0, 129, 235, 80, 230, 200, 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 0, 25, 132, 0, 129, 0, 0, 129, 191, 80, 40, 204, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 0, 0, 0, 25, 132, 0, 129, 0, 0, 129, 0, 0, 230, 200, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 0, 25, 132, 0, 129, 0, 0, 129, 131, 61, 40, 204, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 0, 0, 0, 25, 132, 0, 129, 0, 0, 129, 0, 0, 230, 200, 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 0, 25, 132, 0, 129, 0, 0, 129, 191, 80, 40, 204, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 0, 127, 0, 0, 129, 0, 0, 129, 131, 61, 12, 182, 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 0, 127, 0, 0, 129, 0, 0, 129, 191, 80, 12, 182, 51, 51, 179, 190, 0, 0, 144, 64, 102, 102, 26, 65, 0, 127, 0, 0, 129, 0, 0, 129, 131, 61, 159, 208, 102, 102, 26, 193, 0, 0, 144, 64, 102, 102, 26, 65, 0, 127, 0, 0, 129, 0, 0, 129, 191, 80, 159, 208, 51, 51, 179, 190, 0, 0, 144, 64, 102, 102, 26, 65, 0, 127, 0, 0, 129, 0, 0, 129, 131, 61, 159, 208, 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 0, 127, 0, 0, 129, 0, 0, 129, 191, 80, 12, 182, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 0, 25, 124, 0, 127, 0, 0, 129, 0, 0, 110, 191, 51, 51, 179, 190, 0, 0, 144, 64, 102, 102, 26, 65, 0, 25, 124, 0, 127, 0, 0, 129, 131, 189, 88, 200, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 32, 65, 0, 25, 124, 0, 127, 0, 0, 129, 235, 208, 110, 191, 102, 102, 26, 193, 0, 0, 144, 64, 102, 102, 26, 65, 0, 25, 124, 0, 127, 0, 0, 129, 191, 208, 88, 200, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 32, 65, 0, 25, 124, 0, 127, 0, 0, 129, 235, 208, 110, 191, 51, 51, 179, 190, 0, 0, 144, 64, 102, 102, 26, 65, 0, 25, 124, 0, 127, 0, 0, 129, 131, 189, 88, 200, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 0, 0, 0, 127, 0, 0, 129, 0, 0, 129, 0, 0, 0, 60, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 0, 127, 0, 0, 129, 0, 0, 129, 235, 80, 0, 60, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 0, 127, 0, 0, 129, 0, 0, 129, 0, 0, 203, 208, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 32, 65, 0, 127, 0, 0, 129, 0, 0, 129, 235, 80, 203, 208, 0, 0, 0, 0, 51, 51, 51, 64, 0, 0, 32, 65, 0, 127, 0, 0, 129, 0, 0, 129, 0, 0, 203, 208, 0, 0, 32, 193, 51, 51, 51, 64, 0, 0, 0, 0, 0, 127, 0, 0, 129, 0, 0, 129, 235, 80, 0, 60 ),
+"array_index_data": PoolByteArray( 2, 0, 1, 0, 0, 0, 5, 0, 4, 0, 3, 0, 8, 0, 7, 0, 6, 0, 11, 0, 10, 0, 9, 0, 14, 0, 13, 0, 12, 0, 17, 0, 16, 0, 15, 0, 20, 0, 19, 0, 18, 0, 23, 0, 22, 0, 21, 0, 26, 0, 25, 0, 24, 0, 29, 0, 28, 0, 27, 0, 32, 0, 31, 0, 30, 0, 35, 0, 34, 0, 33, 0, 38, 0, 37, 0, 36, 0, 41, 0, 40, 0, 39, 0, 44, 0, 43, 0, 42, 0, 47, 0, 46, 0, 45, 0, 50, 0, 49, 0, 48, 0, 53, 0, 52, 0, 51, 0, 56, 0, 55, 0, 54, 0, 59, 0, 58, 0, 57, 0, 62, 0, 61, 0, 60, 0, 65, 0, 64, 0, 63, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 66,
+"material": ExtResource( 4 ),
+"name": "towerSquareBase",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 66
+}
+surfaces/1 = {
+"aabb": AABB( -9.65, 4.5, 0.35, 9.3, 5.6, 9.3 ),
+"array_data": PoolByteArray( 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 129, 0, 0, 0, 0, 0, 127, 129, 131, 61, 45, 204, 102, 102, 26, 193, 0, 0, 144, 64, 102, 102, 26, 65, 129, 0, 0, 0, 0, 0, 127, 129, 191, 80, 45, 204, 102, 102, 26, 193, 154, 153, 33, 65, 51, 51, 179, 62, 129, 0, 0, 0, 0, 0, 127, 129, 131, 61, 216, 208, 102, 102, 26, 193, 154, 153, 33, 65, 102, 102, 26, 65, 129, 0, 0, 0, 0, 0, 127, 129, 191, 80, 216, 208, 102, 102, 26, 193, 154, 153, 33, 65, 51, 51, 179, 62, 129, 0, 0, 0, 0, 0, 127, 129, 131, 61, 216, 208, 102, 102, 26, 193, 0, 0, 144, 64, 102, 102, 26, 65, 129, 0, 0, 0, 0, 0, 127, 129, 191, 80, 45, 204, 51, 51, 179, 190, 154, 153, 33, 65, 51, 51, 179, 62, 0, 127, 0, 0, 129, 0, 0, 129, 131, 61, 12, 182, 102, 102, 26, 193, 154, 153, 33, 65, 51, 51, 179, 62, 0, 127, 0, 0, 129, 0, 0, 129, 191, 80, 12, 182, 51, 51, 179, 190, 154, 153, 33, 65, 102, 102, 26, 65, 0, 127, 0, 0, 129, 0, 0, 129, 131, 61, 159, 208, 102, 102, 26, 193, 154, 153, 33, 65, 102, 102, 26, 65, 0, 127, 0, 0, 129, 0, 0, 129, 191, 80, 159, 208, 51, 51, 179, 190, 154, 153, 33, 65, 102, 102, 26, 65, 0, 127, 0, 0, 129, 0, 0, 129, 131, 61, 159, 208, 102, 102, 26, 193, 154, 153, 33, 65, 51, 51, 179, 62, 0, 127, 0, 0, 129, 0, 0, 129, 191, 80, 12, 182, 51, 51, 179, 190, 154, 153, 33, 65, 51, 51, 179, 62, 127, 0, 0, 0, 0, 0, 129, 129, 131, 189, 216, 208, 51, 51, 179, 190, 154, 153, 33, 65, 102, 102, 26, 65, 127, 0, 0, 0, 0, 0, 129, 129, 191, 208, 216, 208, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 127, 0, 0, 0, 0, 0, 129, 129, 131, 189, 45, 204, 51, 51, 179, 190, 0, 0, 144, 64, 102, 102, 26, 65, 127, 0, 0, 0, 0, 0, 129, 129, 191, 208, 45, 204, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 127, 0, 0, 0, 0, 0, 129, 129, 131, 189, 45, 204, 51, 51, 179, 190, 154, 153, 33, 65, 102, 102, 26, 65, 127, 0, 0, 0, 0, 0, 129, 129, 191, 208, 216, 208, 51, 51, 179, 190, 0, 0, 144, 64, 102, 102, 26, 65, 0, 0, 127, 0, 127, 0, 0, 129, 131, 189, 45, 204, 51, 51, 179, 190, 154, 153, 33, 65, 102, 102, 26, 65, 0, 0, 127, 0, 127, 0, 0, 129, 131, 189, 216, 208, 102, 102, 26, 193, 0, 0, 144, 64, 102, 102, 26, 65, 0, 0, 127, 0, 127, 0, 0, 129, 191, 208, 45, 204, 102, 102, 26, 193, 154, 153, 33, 65, 102, 102, 26, 65, 0, 0, 127, 0, 127, 0, 0, 129, 191, 208, 216, 208, 102, 102, 26, 193, 0, 0, 144, 64, 102, 102, 26, 65, 0, 0, 127, 0, 127, 0, 0, 129, 191, 208, 45, 204, 51, 51, 179, 190, 154, 153, 33, 65, 102, 102, 26, 65, 0, 0, 127, 0, 127, 0, 0, 129, 131, 189, 216, 208, 102, 102, 26, 193, 0, 0, 144, 64, 51, 51, 179, 62, 0, 0, 129, 0, 129, 0, 0, 129, 191, 80, 45, 204, 102, 102, 26, 193, 154, 153, 33, 65, 51, 51, 179, 62, 0, 0, 129, 0, 129, 0, 0, 129, 191, 80, 216, 208, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 0, 0, 129, 0, 129, 0, 0, 129, 131, 61, 45, 204, 51, 51, 179, 190, 154, 153, 33, 65, 51, 51, 179, 62, 0, 0, 129, 0, 129, 0, 0, 129, 131, 61, 216, 208, 51, 51, 179, 190, 0, 0, 144, 64, 51, 51, 179, 62, 0, 0, 129, 0, 129, 0, 0, 129, 131, 61, 45, 204, 102, 102, 26, 193, 154, 153, 33, 65, 51, 51, 179, 62, 0, 0, 129, 0, 129, 0, 0, 129, 191, 80, 216, 208 ),
+"array_index_data": PoolByteArray( 2, 0, 1, 0, 0, 0, 5, 0, 4, 0, 3, 0, 8, 0, 7, 0, 6, 0, 11, 0, 10, 0, 9, 0, 14, 0, 13, 0, 12, 0, 17, 0, 16, 0, 15, 0, 20, 0, 19, 0, 18, 0, 23, 0, 22, 0, 21, 0, 26, 0, 25, 0, 24, 0, 29, 0, 28, 0, 27, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 30,
+"material": ExtResource( 3 ),
+"name": "towerSquareBase",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 30
+}
+
+[node name="Castle" type="Spatial"]
+
+[node name="Tower Walls" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.415, 0, 3.81152 )
+
+[node name="towerSquareBase2" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -17.4431 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase3" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -12.9285 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase4" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -26.4681 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase5" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -21.9783 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase6" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -8.24735 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase7" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -3.64556 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase8" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 0.697276 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase9" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 4.9069 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase10" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0196929, 0.0500245, 8.49874 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase11" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 11.1295 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase12" type="MeshInstance" parent="Tower Walls"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 15.0833 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Corners" type="Spatial" parent="Tower Walls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230875, 0, 0 )
+
+[node name="wall" type="Spatial" parent="Tower Walls/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 6.64963, 4.74005e-15, -34.2414 )
+
+[node name="wall2" type="Spatial" parent="Tower Walls/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 6.64963, 4.74005e-15, 16.5717 )
+
+[node name="Tower Walls2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.8052, 0, 3.90085 )
+
+[node name="towerSquareBase2" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -17.4431 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase3" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -12.9285 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase4" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -26.4681 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase5" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -21.9783 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase6" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -8.24735 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase7" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -3.64556 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase8" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 0.697276 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase9" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 4.9069 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase10" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0196929, 0.0500245, 8.49874 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase11" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535526, 0.050024, 11.1295 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase12" type="MeshInstance" parent="Tower Walls2"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 15.0833 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Corners" type="Spatial" parent="Tower Walls2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230875, 0, 0 )
+
+[node name="wall" type="Spatial" parent="Tower Walls2/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 6.64963, 4.74005e-15, -34.2414 )
+
+[node name="wall2" type="Spatial" parent="Tower Walls2/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 6.64963, 4.74005e-15, 16.5717 )
+
+[node name="Tower Walls3" type="Spatial" parent="."]
+transform = Transform( -0.00134393, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.00134393, -2.63954, 0, 24.162 )
+
+[node name="towerSquareBase2" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -17.4431 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase3" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -12.9285 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase4" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -26.4681 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase5" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -21.9783 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase6" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -8.24735 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase7" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -3.64556 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase8" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 0.697276 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase9" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 1.39698e-09, 0, 1.5, 0, -1.39698e-09, 0, 0.5, -0.0535526, 0.050024, 4.90689 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase10" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0196929, 0.0500245, 8.49874 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase11" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535526, 0.050024, 11.1295 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase12" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535526, 0.050024, 15.0833 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase13" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, -1.16415e-10, 0, 1.5, 0, 1.16415e-10, 0, 0.5, -0.059473, 0.050024, 19.4889 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase14" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, -1.16415e-10, 0, 1.5, 0, 1.16415e-10, 0, 0.5, -0.0646801, 0.0500241, 23.3636 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase15" type="MeshInstance" parent="Tower Walls3"]
+transform = Transform( 0.5, 0, -1.16415e-10, 0, 1.5, 0, 1.16415e-10, 0, 0.5, -0.0679016, 0.0500241, 25.7606 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Corners" type="Spatial" parent="Tower Walls3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230875, 0, 0 )
+
+[node name="wall" type="Spatial" parent="Tower Walls3/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 6.64963, 4.74005e-15, -34.2414 )
+
+[node name="wall2" type="Spatial" parent="Tower Walls3/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, -2.84981e-05, 6.70552e-08, 9.49936e-06, 1.49985, -0.00706834, 6.72298e-08, 0.0212051, 0.49995, 6.94177, -0.150987, 27.3582 )
+
+[node name="Tower Walls4" type="Spatial" parent="."]
+transform = Transform( -0.00134393, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.00134393, -2.63954, 0, -29.1856 )
+
+[node name="towerSquareBase2" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -17.4431 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase3" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -12.9285 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase4" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -26.4681 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase5" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -21.9783 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase6" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -8.24735 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase7" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, -3.64556 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase8" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535522, 0.050024, 0.697276 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase9" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 1.39698e-09, 0, 1.5, 0, -1.39698e-09, 0, 0.5, -0.0535526, 0.050024, 4.90689 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase10" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0196929, 0.0500245, 8.49874 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase11" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535526, 0.050024, 11.1295 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase12" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -0.0535526, 0.050024, 15.0833 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase13" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, -1.16415e-10, 0, 1.5, 0, 1.16415e-10, 0, 0.5, -0.059473, 0.050024, 19.4889 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase14" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, -1.16415e-10, 0, 1.5, 0, 1.16415e-10, 0, 0.5, -0.0646801, 0.0500241, 23.3636 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="towerSquareBase15" type="MeshInstance" parent="Tower Walls4"]
+transform = Transform( 0.5, 0, -1.16415e-10, 0, 1.5, 0, 1.16415e-10, 0, 0.5, -0.0679016, 0.0500241, 25.7606 )
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Corners" type="Spatial" parent="Tower Walls4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230875, 0, 0 )
+
+[node name="wall" type="Spatial" parent="Tower Walls4/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 6.64963, 4.74005e-15, -34.2414 )
+
+[node name="wall2" type="Spatial" parent="Tower Walls4/Corners" instance=ExtResource( 1 )]
+transform = Transform( 0.5, -2.84981e-05, 6.70552e-08, 9.49936e-06, 1.49985, -0.00706834, 6.72298e-08, 0.0212051, 0.49995, 6.94177, -0.150987, 27.3582 )
+
+[node name="wallDoor" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69.38, 0, 58.2284 )
